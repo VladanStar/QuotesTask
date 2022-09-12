@@ -142,6 +142,7 @@ input:focus {
 
 .message {
   padding-top: 10px;
+  height: 40px;
   text-align: center;
   color: rebeccapurple;
 }

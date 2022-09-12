@@ -6,9 +6,26 @@ import Button from "../shared/Button";
 const QuotesForm = () => {
   const [text, setText] = useState("");
   const [author, setAuthor] = useState("");
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [message, setMessage] = useState("Hello");
 
-  const handleTextchange = (e) => {
-    console.log(e.target.value);
+  const handleTextchange = ({ target: { value } }) => {
+    if(text ==="" || author===""){
+        setBtnDisabled(true);
+        setMessage(null)
+    }
+    else if(text !=="" && author !=="" && text.trim().length <= 10 && author.trim().length <=10) {
+        setMessage('Text must be at least 10 characters')
+      setBtnDisabled(true)
+    }
+    else {
+        setMessage(null)
+        setBtnDisabled(false)
+      }
+      setText(value);
+      setAuthor(value)
+    
+    // console.log(e.target.value);
   };
   return (
     <Card>
@@ -24,8 +41,9 @@ const QuotesForm = () => {
           <input style={{width:"30px"}}onChange={handleTextchange} type="text" placeholder="Author" 
           value={author}
           />
-          <Button type="submit" version="secondary">Send</Button>
+          <Button type="submit" version="secondary" isDisabled={btnDisabled}>Send</Button>
         </div>
+        {message && <div className="message"></div>}
       </form>
     </Card>
   );
