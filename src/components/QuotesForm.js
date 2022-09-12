@@ -1,71 +1,69 @@
 import React from "react";
-import Card from "./shared/Card"
+import Card from "./shared/Card";
 import { useState } from "react";
-import Button from "./shared/Button";
+import { Button } from "react-bootstrap";
 
 const QuotesForm = () => {
-  // const [quote, setQuote] = useState({
-  //   text: "",
-  //   author: "",
-  // });
   const [text, setText] = useState("");
   const [author, setAuthor] = useState("");
-//   const [btnDisabled, setBtnDisabled] = useState(true);
-//   const [message, setMessage] = useState("Hello");
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [message, setMessage] = useState("Hello");
 
   const handleChange = (e) => {
-    // if (text === "" || author === "") {
-    //   setBtnDisabled(true);
-    //   setMessage(null);
-    // } else if (
-    //   text !== "" &&
-    //   author !== "" &&
-    //   text.trim().length <= 10 &&
-    //   author.trim().length <= 10
-    // ) {
-    //   setMessage("Text must be at least 10 characters");
-    //   setBtnDisabled(true);
-    // } else {
-    //   setMessage(null);
-    //   setBtnDisabled(false);
-    // }
-   // setText(e.target.value);
-    //setAuthor(e.target.value)
-
-    // console.log(e.target.value);
+    if (text === "" || author === "") {
+      setBtnDisabled(true);
+      setMessage(null);
+    } else if (
+      text !== "" &&
+      author !== "" &&
+      text.trim().length <= 10 &&
+      author.trim().length <= 10
+    ) {
+      setMessage("Text must be at least 10 characters");
+      setBtnDisabled(true);
+    } else {
+      setMessage(null);
+      setBtnDisabled(false);
+    }
+    setText(e.target.value);
+    setAuthor(e.target.value1);
   };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(quote);
-  //   setQuote()
-  // };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (text.trim().length > 10) {
+      const newQuote = {
+        text: text,
+        author: author,
+      };
+    }
+  };
   return (
     <Card>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2>Add Quotes</h2>
         <div className="input-group">
           <input
-            onChange={(e)=>setText(e.target.value)}
+            onChange={handleChange}
             type="text"
             name="text"
             placeholder="Write a quotes"
-          value={text}
+            value={text}
           />
           <br />
           <input
             style={{ width: "30px" }}
-            onChange={(e) => setAuthor(e.target.value)}
+            onChange={handleChange}
             type="text"
             name="author"
             placeholder="Author"
-             value={author}
+            value1={author}
           />
-          <Button type="submit" version="secondary" >
+          <Button type="submit" version="secondary">
             Send
           </Button>
         </div>
-        {/* {message && <div className="message"></div>} */}
+        {message && <div className="message"></div>}
       </form>
     </Card>
   );

@@ -16,7 +16,7 @@ function App() {
       <Header text="QUOTES" />
 
       <div className="container">
-        <QuotesForm />
+      <QuotesForm />
         <QuotesStats  quotes={quotes}/>
         <QuotesList quotes={quotes} />
       </div>
