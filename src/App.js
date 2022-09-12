@@ -4,7 +4,7 @@ import QuotesData from "./components/data/QuotesData";
 import { useState } from "react";
 // import Card from "./components/shared/Card";
 import QuotesStats from "./components/QuotesStats";
-import QuotesForm from "./components/data/QuotesForm";
+import QuotesForm from "./components/QuotesForm";
 import "./App.css";
 
 function App() {

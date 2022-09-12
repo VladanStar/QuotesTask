@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "../shared/Card";
+import Card from "./shared/Card"
 import { useState } from "react";
-import Button from "../shared/Button";
+import Button from "./shared/Button";
 
 const QuotesForm = () => {
   // const [quote, setQuote] = useState({
@@ -29,10 +29,8 @@ const QuotesForm = () => {
     //   setMessage(null);
     //   setBtnDisabled(false);
     // }
-    // setQuote((prev) => {
-    //   const { name, value } = e.target;
-    //   return { ...prev, [name]: value };
-    // });
+   // setText(e.target.value);
+    //setAuthor(e.target.value)
 
     // console.log(e.target.value);
   };
@@ -52,7 +50,7 @@ const QuotesForm = () => {
             type="text"
             name="text"
             placeholder="Write a quotes"
-            // value={text}
+          value={text}
           />
           <br />
           <input
@@ -61,7 +59,7 @@ const QuotesForm = () => {
             type="text"
             name="author"
             placeholder="Author"
-            // value={author}
+             value={author}
           />
           <Button type="submit" version="secondary" >
             Send
