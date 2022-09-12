@@ -5,32 +5,31 @@ import { FaChevronUp } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 
 const QuotesItem = ({ item, handleRatingPlus }) => {
-//   const [rating, setRating] = useState(7);
-//   const [text, setText] = useState([
-//     {
-//       text: "Citat",
-//       author: "Robert",
-//     },
-//   ]);
-  //   const handleClickPlus = (id) => {
-  //     setRating((prev) => {
-  //       return prev + 1;
-  //     });
-  //   };
-//   const handleClickMinus = (id) => {
-//     setRating((prev) => {
-//       return prev - 1;
-//     });
-//   };
+  //   const [rating, setRating] = useState(7);
+  const [counterUp, setCounterUp] = useState(0);
+  const [counterDown, setCounterDown] = useState(0);
+
+  var average = Math.round((counterUp / (counterDown + counterUp)) * 100).toFixed(2);
 
   return (
     <Card>
       <div className="num-display">
-        <button onClick={()=> handleRatingPlus(item.id)}>
+        <button
+          onClick={() => {
+            setCounterUp(counterUp + 1);
+          }}
+        >
           <FaChevronUp />
         </button>
-        {item.rating}
-        <button onClick={()=> handleRatingPlus(item.id)}>
+        <div>{isNaN(average) ? "0%": average+"%" }</div>
+        <div>
+          {counterUp} / {counterDown}
+        </div>
+        <button
+          onClick={() => {
+            setCounterDown(counterDown + 1);
+          }}
+        >
           <FaChevronDown />
         </button>
       </div>
