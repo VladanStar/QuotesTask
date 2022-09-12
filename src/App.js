@@ -13,7 +13,9 @@ function App() {
   return (
     <>
       <Header text="QUOTES" />
+
       <div className="container">
+        <QuotesStats  quotes={quotes}/>
         <QuotesList quotes={quotes} />
       </div>
     </>

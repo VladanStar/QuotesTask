@@ -1,8 +1,11 @@
 import React from 'react'
 
-const QuotesStats = () => {
+const QuotesStats = ({quotes}) => {
   return (
-    <div>QuotesStats</div>
+    <div className='feedback-stats' >
+     <h4>{quotes.length} Reviews</h4>
+     <h4>Average</h4>
+     </div>
   )
 }
 
