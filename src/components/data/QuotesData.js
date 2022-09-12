@@ -25,19 +25,19 @@ const QuotesData = [
   },
   {
     id: 5,
-    rating: 10,
+    rating: 4,
     text: "Always forgive your enemies; nothing annoys them so much.",
     author: "Oscar Wilde",
   },
   {
     id: 6,
-    rating: 10,
+    rating: 5,
     text: "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.",
     author: "Albert Einstein",
   },
   {
     id: 7,
-    rating: 10,
+    rating: 5,
     text: "So many books, so little time.",
     author: "Frank Zappa",
   },
