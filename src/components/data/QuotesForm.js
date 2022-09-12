@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../shared/Card";
 import { useState } from "react";
+import Button from "../shared/Button";
 
 const QuotesForm = () => {
   const [text, setText] = useState("");
@@ -19,11 +20,11 @@ const QuotesForm = () => {
             type="text"
             placeholder="Write a quotes"
             value={text}
-          />
-          <input onChange={handleTextchange} type="text" placeholder="Author" 
+          /><br/>
+          <input style={{width:"30px"}}onChange={handleTextchange} type="text" placeholder="Author" 
           value={author}
           />
-          <button type="submit">Send</button>
+          <Button type="submit" version="secondary">Send</Button>
         </div>
       </form>
     </Card>
