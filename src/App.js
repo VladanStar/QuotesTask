@@ -1,12 +1,15 @@
-
-import './App.css';
+import Header from "./components/Header";
+import QuotesItem from "./components/QuotesItem";
+import "./App.css";
 
 function App() {
   return (
-    <div className="container">
-      <h1>My App</h1>
-      <p>Hello</p>
-    </div>
+    <>
+      <Header text="QUOTES" />
+      <div className="container">
+        <QuotesItem />
+      </div>
+    </>
   );
 }
 

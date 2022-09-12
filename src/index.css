@@ -1,13 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  background-color: darkblue;
+  color: whitesmoke;
+  line-height: 1.6;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 768px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: blueviolet;
+}
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 15px;
+  padding: 30px 40px;
+  margin: 20px 0;
+  position: relative;
+  border: 5px solid blue;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+ .num-display {
+  position: relative;
+  background: #f4f4f4;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  font-size: 19px;
+  transition: 0.3s;
+  border: 5px solid blue;
+} 
+
+
+.num-display {
+  background: #ff6a95;
+  color: #fff;
+}
+.num-display {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.author-display {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
 }
