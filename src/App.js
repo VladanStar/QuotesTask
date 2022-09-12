@@ -10,7 +10,7 @@ function App() {
     <>
       <Header text="QUOTES" />
       <div className="container">
-        <QuotesList />
+        <QuotesList  quotes= {quotes}/>
      
       </div>
     </>
