@@ -68,3 +68,80 @@ header {
   right: 30px;
   bottom: 20px;
 }
+.input-group {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+input {
+  flex-grow: 2;
+  border: none;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.feedback-stats {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close,
+.edit {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.edit {
+  right: 40px;
+}
+
+.btn {
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #202142;
+}
+
+.btn-secondary {
+  background: #ff6a95;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  color: #333;
+  cursor: auto;
+}
+
+.btn:disabled:hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.message {
+  padding-top: 10px;
+  text-align: center;
+  color: rebeccapurple;
+}
