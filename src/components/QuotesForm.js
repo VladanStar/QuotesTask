@@ -4,6 +4,7 @@ import { useState } from "react";
 import Button from "./shared/Button";
 
 const QuotesForm = ({ handleAdd }) => {
+  <div>Add Quotes</div>
   // const [quote, setQuote] = useState({
   //   text: "",
   //   author: "",

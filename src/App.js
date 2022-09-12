@@ -7,7 +7,7 @@ import {v4 as uuidv4} from "uuid"
 import QuotesStats from "./components/QuotesStats";
 import QuotesForm from "./components/QuotesForm";
 import AboutUs from "./components/AboutUs";
-import {BrowserRouter as Router, Route, } from "react-router-dom"
+import {BrowserRouter as Router, Route,Routes } from "react-router-dom"
 import "./App.css";
 
 function App() {
@@ -26,10 +26,22 @@ function App() {
       <Header text="QUOTES" />
 
       <div className="container">
+        <Routes>
+        <Route path="/" element={
+          <>
+     
+ 
       <QuotesForm  handleAdd ={addQuote}/>
         <QuotesStats  quotes={quotes}/>
         <QuotesList quotes={quotes} />
-        <Route path='/about'>This is about route</Route>
+        </>
+        }>
+        </Route>
+        
+        <Route path='/about' element={<AboutUs/>}/>
+        </Routes>
+       
+       
       </div>
       </Router>
     </>
