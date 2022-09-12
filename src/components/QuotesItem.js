@@ -9,7 +9,9 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
   const [counterUp, setCounterUp] = useState(0);
   const [counterDown, setCounterDown] = useState(0);
 
-  var average = Math.round((counterUp / (counterDown + counterUp)) * 100).toFixed(2);
+  var average = Math.round(
+    (counterUp / (counterDown + counterUp)) * 100
+  ).toFixed(2);
 
   return (
     <Card>
@@ -21,8 +23,8 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
         >
           <FaChevronUp />
         </button>
-        <div>{isNaN(average) ? "0%": average+"%" }</div>
-        <div>
+        <div>{isNaN(average) ? "0%" : average + "%"}</div>
+        <div style={{ color: "red" }}>
           {counterUp} / {counterDown}
         </div>
         <button

@@ -45,7 +45,7 @@ header {
 .num-display {
   position: relative;
   background: #f4f4f4;
-  width: 70px;
+  width: 60px;
   height: 120px;
   padding: 10px;
   text-align: center;
@@ -55,7 +55,7 @@ header {
 }
 
 .num-display {
-  background: #ff6a95;
+  background: cadetblue;
   color: #fff;
 }
 .num-display {
