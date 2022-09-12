@@ -6,6 +6,8 @@ import {v4 as uuidv4} from "uuid"
 // import Card from "./components/shared/Card";
 import QuotesStats from "./components/QuotesStats";
 import QuotesForm from "./components/QuotesForm";
+import AboutUs from "./components/AboutUs";
+import {BrowserRouter as Router, Route, } from "react-router-dom"
 import "./App.css";
 
 function App() {
@@ -20,13 +22,16 @@ function App() {
 
   return (
     <>
+    <Router>
       <Header text="QUOTES" />
 
       <div className="container">
       <QuotesForm  handleAdd ={addQuote}/>
         <QuotesStats  quotes={quotes}/>
         <QuotesList quotes={quotes} />
+        <Route path='/about'>This is about route</Route>
       </div>
+      </Router>
     </>
   );
 }

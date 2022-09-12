@@ -3,15 +3,15 @@ import Card from "./shared/Card";
 import { useState } from "react";
 import Button from "./shared/Button";
 
-const QuotesForm = ({handleAdd}) => {
+const QuotesForm = ({ handleAdd }) => {
   // const [quote, setQuote] = useState({
   //   text: "",
   //   author: "",
   // });
   const [text, setText] = useState("");
   const [author, setAuthor] = useState("");
-  //   const [btnDisabled, setBtnDisabled] = useState(true);
-   const [message, setMessage] = useState("Hello");
+  const [btnDisabled, setBtnDisabled] = useState(true);
+  const [message, setMessage] = useState("Hello");
 
   const handleChange = (e) => {
     // if (text === "" || author === "") {
@@ -33,32 +33,32 @@ const QuotesForm = ({handleAdd}) => {
     //setAuthor(e.target.value)
     // console.log(e.target.value);
   };
-   const handleSubmit = (e) => {
+  const handleSubmit = (e) => {
     if (text === "" || author === "") {
-    setMessage(null);
-    }else if (
-       text !== "" &&
-        author !== "" &&
-         text.trim().length <= 10 &&
-        author.trim().length <= 10
-      ) {
-       setMessage("Text must be at least 10 characters");
-      
-     } else {
-        setMessage(null);
-     
-     }
+      setMessage(null);
+      setBtnDisabled(true);
+    } else if (
+      text !== "" &&
+      author !== "" &&
+      text.trim().length <= 10 &&
+      author.trim().length <= 10
+    ) {
+      setMessage("Text must be at least 10 characters");
+      setBtnDisabled(true);
+    } else {
+      setMessage(null);
+      setBtnDisabled(false);
+    }
     e.preventDefault();
-   console.log("");
-   const newQuote = {
-    text:text,
-    author:author
-   }
-   handleAdd(newQuote)
-   setText("");
-   setAuthor("");
-  
-   };
+    console.log("");
+    const newQuote = {
+      text: text,
+      author: author,
+    };
+    handleAdd(newQuote);
+    setText("");
+    setAuthor("");
+  };
 
   return (
     <Card>
@@ -85,7 +85,7 @@ const QuotesForm = ({handleAdd}) => {
             Send
           </Button>
         </div>
-         {message && <div className="message"></div>} 
+        {message && <div className="message"></div>}
       </form>
     </Card>
   );
