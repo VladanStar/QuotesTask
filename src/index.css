@@ -42,7 +42,7 @@ header {
   font-weight: 600;
   text-align: center;
 }
- .num-display {
+.num-display {
   position: relative;
   background: #f4f4f4;
   width: 50px;
@@ -52,8 +52,7 @@ header {
   font-size: 19px;
   transition: 0.3s;
   border: 5px solid blue;
-} 
-
+}
 
 .num-display {
   background: #ff6a95;
