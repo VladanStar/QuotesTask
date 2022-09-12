@@ -4,12 +4,12 @@ import { useState } from "react";
 import Button from "../shared/Button";
 
 const QuotesForm = () => {
-  const [quote, setQuote] = useState({
-    text: "",
-    author: "",
-  });
-//   const [text, setText] = useState("");
-//   const [author, setAuthor] = useState("");
+  // const [quote, setQuote] = useState({
+  //   text: "",
+  //   author: "",
+  // });
+  const [text, setText] = useState("");
+  const [author, setAuthor] = useState("");
 //   const [btnDisabled, setBtnDisabled] = useState(true);
 //   const [message, setMessage] = useState("Hello");
 
@@ -29,26 +29,26 @@ const QuotesForm = () => {
     //   setMessage(null);
     //   setBtnDisabled(false);
     // }
-    setQuote((prev) => {
-      const { name, value } = e.target;
-      return { ...prev, [name]: value };
-    });
+    // setQuote((prev) => {
+    //   const { name, value } = e.target;
+    //   return { ...prev, [name]: value };
+    // });
 
     // console.log(e.target.value);
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(quote);
-    setQuote()
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(quote);
+  //   setQuote()
+  // };
 
   return (
     <Card>
-      <form onSubmit={handleSubmit}>
+      <form>
         <h2>Add Quotes</h2>
         <div className="input-group">
           <input
-            onChange={handleChange}
+            onChange={(e)=>setText(e.target.value)}
             type="text"
             name="text"
             placeholder="Write a quotes"
@@ -57,7 +57,7 @@ const QuotesForm = () => {
           <br />
           <input
             style={{ width: "30px" }}
-            onChange={handleChange}
+            onChange={(e) => setAuthor(e.target.value)}
             type="text"
             name="author"
             placeholder="Author"
