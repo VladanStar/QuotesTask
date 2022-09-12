@@ -3,6 +3,7 @@ import QuotesList from "./components/QuotesList";
 import QuotesData from "./components/data/QuotesData";
 import { useState } from "react";
 // import Card from "./components/shared/Card";
+import QuotesStats from "./components/QuotesStats";
 import "./App.css";
 
 function App() {
