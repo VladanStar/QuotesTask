@@ -4,7 +4,7 @@ const QuotesStats = ({quotes}) => {
   let average = Math.round(quotes.reduce((acc, {rating})=>{
     return acc + rating;
   },0)/quotes.length)
-  console.log(average)
+
 
   // average = average.toFixed(1).replace(/[.,]0$/, '')
   // average = Math.round(average)

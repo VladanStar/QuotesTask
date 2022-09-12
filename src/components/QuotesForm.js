@@ -11,7 +11,7 @@ const QuotesForm = ({handleAdd}) => {
   const [text, setText] = useState("");
   const [author, setAuthor] = useState("");
   //   const [btnDisabled, setBtnDisabled] = useState(true);
-  //   const [message, setMessage] = useState("Hello");
+   const [message, setMessage] = useState("Hello");
 
   const handleChange = (e) => {
     // if (text === "" || author === "") {
@@ -34,6 +34,20 @@ const QuotesForm = ({handleAdd}) => {
     // console.log(e.target.value);
   };
    const handleSubmit = (e) => {
+    if (text === "" || author === "") {
+    setMessage(null);
+    }else if (
+       text !== "" &&
+        author !== "" &&
+         text.trim().length <= 10 &&
+        author.trim().length <= 10
+      ) {
+       setMessage("Text must be at least 10 characters");
+      
+     } else {
+        setMessage(null);
+     
+     }
     e.preventDefault();
    console.log("");
    const newQuote = {
@@ -71,7 +85,7 @@ const QuotesForm = ({handleAdd}) => {
             Send
           </Button>
         </div>
-        {/* {message && <div className="message"></div>} */}
+         {message && <div className="message"></div>} 
       </form>
     </Card>
   );
