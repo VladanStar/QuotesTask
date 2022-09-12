@@ -8,29 +8,29 @@ const QuotesForm = () => {
     text: "",
     author: "",
   });
-  const [text, setText] = useState("");
-  const [author, setAuthor] = useState("");
-  const [btnDisabled, setBtnDisabled] = useState(true);
-  const [message, setMessage] = useState("Hello");
+//   const [text, setText] = useState("");
+//   const [author, setAuthor] = useState("");
+//   const [btnDisabled, setBtnDisabled] = useState(true);
+//   const [message, setMessage] = useState("Hello");
 
   const handleChange = (e) => {
-    if (text === "" || author === "") {
-      setBtnDisabled(true);
-      setMessage(null);
-    } else if (
-      text !== "" &&
-      author !== "" &&
-      text.trim().length <= 10 &&
-      author.trim().length <= 10
-    ) {
-      setMessage("Text must be at least 10 characters");
-      setBtnDisabled(true);
-    } else {
-      setMessage(null);
-      setBtnDisabled(false);
-    }
+    // if (text === "" || author === "") {
+    //   setBtnDisabled(true);
+    //   setMessage(null);
+    // } else if (
+    //   text !== "" &&
+    //   author !== "" &&
+    //   text.trim().length <= 10 &&
+    //   author.trim().length <= 10
+    // ) {
+    //   setMessage("Text must be at least 10 characters");
+    //   setBtnDisabled(true);
+    // } else {
+    //   setMessage(null);
+    //   setBtnDisabled(false);
+    // }
     setQuote((prev) => {
-      const { name, value } = e.value;
+      const { name, value } = e.target;
       return { ...prev, [name]: value };
     });
 
@@ -39,6 +39,7 @@ const QuotesForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(quote);
+    setQuote()
   };
 
   return (
@@ -51,7 +52,7 @@ const QuotesForm = () => {
             type="text"
             name="text"
             placeholder="Write a quotes"
-            value={text}
+            // value={text}
           />
           <br />
           <input
@@ -60,13 +61,13 @@ const QuotesForm = () => {
             type="text"
             name="author"
             placeholder="Author"
-            value={author}
+            // value={author}
           />
-          <Button type="submit" version="secondary" isDisabled={btnDisabled}>
+          <Button type="submit" version="secondary" >
             Send
           </Button>
         </div>
-        {message && <div className="message"></div>}
+        {/* {message && <div className="message"></div>} */}
       </form>
     </Card>
   );
