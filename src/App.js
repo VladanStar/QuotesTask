@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import QuotesItem from "./components/QuotesItem";
+import QuotesList from "./components/QuotesList";
 import QuotesData from "./components/data/QuotesData";
 import { useState } from "react";
 import "./App.css";
@@ -10,7 +10,8 @@ function App() {
     <>
       <Header text="QUOTES" />
       <div className="container">
-        <QuotesItem />
+        <QuotesList />
+     
       </div>
     </>
   );
