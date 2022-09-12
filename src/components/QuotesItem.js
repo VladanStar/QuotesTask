@@ -23,8 +23,10 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
         >
           <FaChevronUp />
         </button>
-        <div>{isNaN(average) ? "0%" : average + "%"}</div>
         <div style={{ color: "red" }}>
+          {isNaN(average) ? "0%" : average + "%"}
+        </div>
+        <div>
           {counterUp} / {counterDown}
         </div>
         <button
@@ -39,8 +41,6 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
         {item.text}
         <p className="author-display">{item.author}</p>
       </div>
-      {/* <button onClick={handleClickPlus}>Click rating</button>
-      <button onClick={handleClickMinus}>Click rating</button> */}
     </Card>
   );
 };
