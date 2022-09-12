@@ -10,13 +10,17 @@ import "./App.css";
 function App() {
   const [quotes, setQuotes] = useState(QuotesData);
   const [rating, setRating] = useState("");
+  const addQuote= (newQuote)=>{
+    console.log(newQuote)
+
+  }
 
   return (
     <>
       <Header text="QUOTES" />
 
       <div className="container">
-      <QuotesForm />
+      <QuotesForm  handleAdd ={addQuote}/>
         <QuotesStats  quotes={quotes}/>
         <QuotesList quotes={quotes} />
       </div>
