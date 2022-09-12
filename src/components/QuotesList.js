@@ -7,8 +7,8 @@ const QuotesList = ({quotes}) => {
     }
   return (
     <div className='feedback-list'>
-        {quotes.map((item,id)=>(
-          <QuotesItem />
+        {quotes.map((item)=>(
+          <QuotesItem key={item.id} item ={item}/>
         ))}
     </div>
   )

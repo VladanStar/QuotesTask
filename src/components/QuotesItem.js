@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const QuotesItem = () => {
+const QuotesItem = ({item}) => {
   const [rating, setRating] = useState(7);
   const [text, setText] = useState([
     {
@@ -22,10 +22,10 @@ const QuotesItem = () => {
 //   };
   return (
     <div className="card">
-      <div className="num-display">{rating}</div>
+      <div className="num-display">{item.rating}</div>
       <div className="text-display">
-        {text[0].text}
-        <p className="author-display">{text[0].author}</p>
+        {item.text}
+        <p className="author-display">{item.author}</p>
       </div>
       {/* <button onClick={handleClickPlus}>Click rating</button>
       <button onClick={handleClickMinus}>Click rating</button> */}
