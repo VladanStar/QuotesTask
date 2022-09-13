@@ -8,6 +8,11 @@ const Header = ({ text }) => {
       <header>
        
         <div className="container">
+         
+
+
+          
+         
           <h2>{text}</h2>
         </div>
       

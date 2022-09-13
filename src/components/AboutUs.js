@@ -9,6 +9,7 @@ const AboutUs = (props) => {
             <h1>About This Project</h1>
             <p>This is a React app Quotes</p>
             <p>Version: 1.0.0</p>
+            <p>By Vladan Cupric</p>
     
             <p>
               <Link to='/'>Back To Home</Link>

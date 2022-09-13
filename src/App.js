@@ -4,7 +4,7 @@ import QuotesData from "./components/data/QuotesData";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 // import Card from "./components/shared/Card";
-
+import AboutIconLink from "./components/AboutIconLink";
 import QuotesForm from "./components/QuotesForm";
 import AboutUs from "./components/AboutUs";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -35,11 +35,14 @@ function App() {
               <>
                 <QuotesForm handleAdd={addQuote} />
                 <QuotesList quotes={quotes} />
+               
               </>
             }
           ></Route>
+             <Route path='/about' element={<AboutUs />} />
         </Routes>
       </div>
+      <AboutIconLink />
     </Router>
   );
 }
