@@ -18,15 +18,19 @@ const QuotesList = ({ quotes }) => {
   const currentPosts = quotes.slice(indexOfFirstPost, indexOfLastPost);
   return (
     <div className="feedback-list">
+
       {quotes.map((item) => (
         <QuotesItem key={item.id} item={item} />
+        
+    
       ))}
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={quotes.length}
-        paginate={paginate}
-      />
+        paginate={paginate}/>
+      
     </div>
+   
   );
 };
 
