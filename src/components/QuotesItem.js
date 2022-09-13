@@ -9,10 +9,10 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
   const [counterUp, setCounterUp] = useState(0);
   const [counterDown, setCounterDown] = useState(0);
 
-  var average = Math.round(
+  const average = Math.round(
     (counterUp / (counterDown + counterUp)) * 100
   ).toFixed(2);
-  const colorFont = "";
+  const colorFont = "white";
 
 
 
@@ -27,7 +27,7 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
           >
             <FaChevronUp />
           </button>
-          <div style={{ color: colorFont, width: "12px" }}>
+          <div style={{ color: (average>50) ? "red":"blue", color:(average>80 ? "green":"blue"),color:(average<50 ? "red":"blue"), width: "12px" }}>
             {isNaN(average) ? "0%" : average + "%"}
           </div>
           <div>
