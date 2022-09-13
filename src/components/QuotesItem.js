@@ -13,15 +13,26 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
     (counterUp / (counterDown + counterUp)) * 100
   ).toFixed(2);
   const colorFont = "";
-  if (average > 80) {
-    colorFont = "darkblue";
-  } else if (average > 60 && average < 80) {
-    colorFont = "blue";
-  } else if (average > 30 && average < 60) {
-    colorFont = "green";
-  } else {
-    colorFont = "red";
+
+  switch (average / 100) {
+    case 10:
+    case 9:
+      colorFont = "green";
+      break;
+    case 8:
+    case 7:
+    case 6:
+      colorFont = "blue";
+      break;
+
+    case 5:
+      colorFont = "darkred";
+      break;
+
+    default:
+      break;
   }
+
   return (
     <Card>
       <div className="display">

@@ -135,7 +135,7 @@ input:focus {
 
 .btn:disabled {
   background-color: #cccccc;
-  color: #333;
+  color: rgb(165, 14, 14);
   cursor: auto;
 }
 
@@ -161,7 +161,7 @@ input:focus {
 }
 
 .about-link a:hover {
-  color: #ff6a95;
+  color: #7e0b2b;
 }
 
 .about h1 {
