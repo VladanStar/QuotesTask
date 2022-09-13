@@ -14,24 +14,7 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
   ).toFixed(2);
   const colorFont = "";
 
-  switch (average / 100) {
-    case 10:
-    case 9:
-      colorFont = "green";
-      break;
-    case 8:
-    case 7:
-    case 6:
-      colorFont = "blue";
-      break;
 
-    case 5:
-      colorFont = "darkred";
-      break;
-
-    default:
-      break;
-  }
 
   return (
     <Card>
