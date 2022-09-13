@@ -169,3 +169,6 @@ input:focus {
 .about p {
   margin: 10px 0;
 }
+.about {
+  height: 30vh;
+}
