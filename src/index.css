@@ -36,6 +36,7 @@ header {
   margin: 20px 0;
   position: relative;
   border: 5px solid blue;
+  height: 20vh;
 }
 
 .card h2 {
@@ -57,7 +58,10 @@ header {
   font-size: 10px;
   transition: 0.3s;
   border: 5px solid blue;
+  border-radius: 15px;
   margin: 10px;
+  left:-40px;
+  top: -35px;
   
 }
 
@@ -146,7 +150,7 @@ input:focus {
 }
 .about-link {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .about-link a {
