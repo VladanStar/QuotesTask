@@ -21,7 +21,7 @@ const QuotesList = ({ quotes }) => {
   return (
     <div className="feedback-list">
 
-      {quotes.map((item) => (
+      {quotes.slice(pagesVisited, pagesVisited + quotesPerPage).map((item) => (
         <QuotesItem key={item.id} item={item} />
         
     
