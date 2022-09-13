@@ -55,7 +55,8 @@ header {
   height: 120px;
   padding: 10px;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bolder;
   transition: 0.3s;
   border: 5px solid blue;
   border-radius: 15px;
@@ -123,7 +124,8 @@ input:focus {
 }
 
 .btn-secondary {
-  background: #ff6a95;
+  background: #df0d48;
+  font-weight: bolder;
 }
 
 .btn:hover {

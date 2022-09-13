@@ -12,36 +12,45 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
   var average = Math.round(
     (counterUp / (counterDown + counterUp)) * 100
   ).toFixed(2);
-
+  const colorFont = "";
+  if (average > 80) {
+    colorFont = "darkblue";
+  } else if (average > 60 && average < 80) {
+    colorFont = "blue";
+  } else if (average > 30 && average < 60) {
+    colorFont = "green";
+  } else {
+    colorFont = "red";
+  }
   return (
     <Card>
       <div className="display">
-      <div className="num-display">
-        <button
-          onClick={() => {
-            setCounterUp(counterUp + 1);
-          }}
-        >
-          <FaChevronUp />
-        </button>
-        <div style={{ color: "red" }}>
-          {isNaN(average) ? "0%" : average + "%"}
+        <div className="num-display">
+          <button
+            onClick={() => {
+              setCounterUp(counterUp + 1);
+            }}
+          >
+            <FaChevronUp />
+          </button>
+          <div style={{ color: colorFont, width: "12px" }}>
+            {isNaN(average) ? "0%" : average + "%"}
+          </div>
+          <div>
+            {counterUp} / {counterDown}
+          </div>
+          <button
+            onClick={() => {
+              setCounterDown(counterDown + 1);
+            }}
+          >
+            <FaChevronDown />
+          </button>
         </div>
-        <div>
-          {counterUp} / {counterDown}
+        <div className="text-display">
+          {item.text}
+          <p className="author-display">{item.author}</p>
         </div>
-        <button
-          onClick={() => {
-            setCounterDown(counterDown + 1);
-          }}
-        >
-          <FaChevronDown />
-        </button>
-      </div>
-      <div className="text-display">
-        {item.text}
-        <p className="author-display">{item.author}</p>
-      </div>
       </div>
     </Card>
   );
