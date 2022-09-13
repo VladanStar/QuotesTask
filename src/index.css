@@ -42,27 +42,33 @@ header {
   font-weight: 600;
   text-align: center;
 }
+.display {
+  display: flex;
+  padding: 10px;
+}
 .num-display {
-  position: relative;
+  position: relative; 
   background: #f4f4f4;
-  width: 60px;
+  width: 70px;
   height: 120px;
   padding: 10px;
   text-align: center;
   font-size: 10px;
   transition: 0.3s;
   border: 5px solid blue;
+  margin: 10px;
+  
 }
 
 .num-display {
   background: cadetblue;
   color: #fff;
 }
-.num-display {
+/* .num-display {
   position: absolute;
-  top: -10px;
-  left: -10px;
-}
+  top: -20px;
+  left: -20px;
+} */
 .author-display {
   position: absolute;
   right: 30px;

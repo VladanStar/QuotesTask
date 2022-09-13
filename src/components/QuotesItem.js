@@ -15,6 +15,7 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
 
   return (
     <Card>
+      <div className="display">
       <div className="num-display">
         <button
           onClick={() => {
@@ -40,6 +41,7 @@ const QuotesItem = ({ item, handleRatingPlus }) => {
       <div className="text-display">
         {item.text}
         <p className="author-display">{item.author}</p>
+      </div>
       </div>
     </Card>
   );
