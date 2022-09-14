@@ -3,6 +3,7 @@ import QuotesList from "./components/QuotesList";
 import QuotesData from "./components/data/QuotesData";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import NotFound from "./components/NotFound";
 // import Card from "./components/shared/Card";
 import AboutIconLink from "./components/AboutIconLink";
 import QuotesForm from "./components/QuotesForm";
@@ -40,6 +41,7 @@ function App() {
             }
           ></Route>
              <Route path='/about' element={<AboutUs />} />
+             <Route path='*' element={<NotFound />} />
         </Routes>
       </div>
       <AboutIconLink />
